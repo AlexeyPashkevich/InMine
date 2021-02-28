@@ -1566,6 +1566,16 @@
   margin-bottom: 120px;
   max-width: 479px;
 }
+.portfolio.best-projects{
+  overflow-x: hidden;
+}
+.hottest{
+  overflow-x: hidden;
+  position: relative;
+}
+.wrapper{
+  overflow: hidden;
+}
 
 // adaptive start
 
@@ -1707,6 +1717,47 @@
   }
 }
 @media (max-width: 779px) {
+  .header__menu-link.active {
+    color: #fff;
+    position: relative;
+    background-color: $violet2;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      bottom: -4px;
+      width: 120%;
+      height: 0px;
+      border-radius: 5px;
+      background-color: $green;
+      transform: scaleX(1);
+    }
+  }
+  .header__menu-list {
+    li {
+      a {
+        &::before {
+          content: "";
+          position: absolute;
+          left: -5px;
+          bottom: -23px;
+          width: 117%;
+          height: 0px;
+          border-radius: 5px;
+          background-color: $green;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.7s;
+        }
+        &:hover::before {
+          transform: scaleX(1);
+        }
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
   .about-us__main-title {
     font-size: 55px;
   }
@@ -1864,7 +1915,7 @@
   .latest-products__top-left {
     display: block;
   }
-  .page-404__title{
+  .page-404__title {
     font-size: 42px;
   }
   .create-link {
@@ -1885,7 +1936,6 @@
 }
 
 @media (max-width: 530px) {
-
   .product .arrows-slider {
     display: none !important;
   }
