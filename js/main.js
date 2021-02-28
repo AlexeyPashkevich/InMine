@@ -88,4 +88,8 @@ $(function () {
     $('.header__menu-list').slideToggle()
   });
 
+  new WOW({
+    offset: 50
+  }).init();
+
 });
